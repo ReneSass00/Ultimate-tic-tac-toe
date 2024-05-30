@@ -1,0 +1,77 @@
+/* CSS für das Markieren der gewonnenen Boards */
+.board.win-x,
+.board.win-o {
+    background-color: #f4cccc; /* Hellrot für X */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /* Roter Schatten */
+    opacity: 0.6; /* Transparenz */
+    transform: scale(0.9); /* Verkleinern */
+    transition: all 0.3s ease-in-out; /* Sanfte Animation */
+}
+
+.board.win-o {
+    background-color: #c9daf8; /* Hellblau für O */
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5); /* Blauer Schatten */
+    opacity: 0.6; /* Transparenz */
+    transform: scale(0.9); /* Verkleinern */
+    transition: all 0.3s ease-in-out; /* Sanfte Animation */
+}
+
+/* CSS für Zellen je nach Spieler */
+.cell.x {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.cell.o {
+    background-color: rgba(0, 0, 255, 0.6);
+}
+
+/* CSS für die Markierung des aktiven Boards */
+.board.active {
+    background-color: #d4f7d4; /* Hellgrün */
+    box-shadow: 0 0 15px rgba(0, 128, 0, 0.5); /* Grüner Schatten */
+}
+
+/* Andere bestehende CSS-Regeln */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.meta-board {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+    gap: 5px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease-in-out; /* Sanfte Animation */
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
